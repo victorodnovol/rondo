@@ -1,7 +1,7 @@
 package smeta_asutp;
 
 import java.io.Serializable;
-import java.util;
+import java.util.*;
 
 
 public class Smeta extends Observable implements Serializable {
@@ -11,7 +11,6 @@ public class Smeta extends Observable implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private Float price = 0f;
-	private ArrayList<UpdateListener> list;
 
 	public Float getPrice() {
 		return price;
@@ -21,15 +20,9 @@ public class Smeta extends Observable implements Serializable {
 		this.price = price;
 	}
 	
-	private void notifyUpdateListeners(){
-		// notifies every update listener on list (observers), that model was updated
+	public void calculate (){
 		
 	}
-	
-	public void addUpdateListener ( UpdateListener l ){
-		// this adds another listener to the list
 		
-	}
-	
 
 }
